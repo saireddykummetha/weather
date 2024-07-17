@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="weather1.css">
+</head>
+<body>
+     
+    <div class="wrapper">
+        <h1 class="tab">Weather App</h1>
+        <div  class="tab-container">
+        <p class="tab" data-userweather>your weather</p>
+        <p class="tab" data-search-weather>Search weather</p>
+        </div>
+        <!-- container -->
+        <div class="weather-container">
+        <div class=" grant-location-container sub-container">
+       <img src="image.png/location.png.jpg" width="80" height="80" loading="lazy" alt="location">
+       <p>Grant location Access</p>
+       <p data-messageTest>Allow Access To Get Weather Information</p>
+       <button class="btn" data-GrantAccess>Grant Access</button>
+        </div>
+        <form class="form-container" data-searchform>
+            <input type="text" placeholder="Search for city..." data-searchinp>
+            <button class="btn" type="submit">
+                <img src="https://raw.githubusercontent.com/MubashirCodesYoutube/Weather-App/a5a8b4ce1f661f29ac185cfa7ca2536f7e07c5e7/search.png" width="18" height="18" alt="search">
+            </button>
+        </form>
+        <div class="sub-container loading-container">
+            <img src="image.png/loading.gif" width="150" height="150" alt="loading">
+            <p>Loading....</p>
+        </div>
+        <div class="sub-container user-info-container">
+            <div class="name">
+             <p data-cityName></p>
+             <img crossorigin="anonymous" data-contryIcon>
+            </div>
+        
+            <p data-weatherDesc=""></p>
+             <img data-weatherIcon>
+            <p data-temp></p>
+          <div class="parameter-container">
+          <div class="parameter">
+           <img src="https://raw.githubusercontent.com/MubashirCodesYoutube/Weather-App/a5a8b4ce1f661f29ac185cfa7ca2536f7e07c5e7/wind.png"alt="">
+           <p class="parameter-title">windspeed</p>
+           <p class="parameter-value" data-windspeed></p>
+          </div>
+
+          <div class="parameter">
+            <img src="https://raw.githubusercontent.com/MubashirCodesYoutube/Weather-App/a5a8b4ce1f661f29ac185cfa7ca2536f7e07c5e7/humidity.png"alt="">
+            <p class="parameter-title">humidity</p>
+            <p class="parameter-value" data-humidity></p>
+           </div>
+
+           <div class="parameter">
+            <img src="https://raw.githubusercontent.com/MubashirCodesYoutube/Weather-App/a5a8b4ce1f661f29ac185cfa7ca2536f7e07c5e7/cloud.png"alt="">
+            <p class="parameter-title">clouds</p>
+            <p class="parameter-value" data-cloudliness></p>
+           </div>
+          </div>
+        </div>
+
+        
+        <div class="sub-container api-error-container">
+            <img src="https://raw.githubusercontent.com/MubashirCodesYoutube/Weather-App/a5a8b4ce1f661f29ac185cfa7ca2536f7e07c5e7/not-found.png" alt="" data-notfoundingImg>
+            <p data-api-Error-Text></p>
+            <button class="btn" data-apiError-btn>Retry</button>
+        </div>
+        </div>
+    </div>
+    <script src="weather1.js"></script>
+</body>
+</html>
